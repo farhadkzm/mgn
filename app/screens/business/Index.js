@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import TopIcons from './TopIcons';
 
 class Business extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class Business extends Component {
     render() {
         return (
             <View>
-                <Text> Business Page </Text>
+                <TopIcons/>
             </View>
         );
     }
