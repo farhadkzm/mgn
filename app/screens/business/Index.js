@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import TopIcons from './TopIcons';
 
 class Business extends Component {
@@ -11,11 +11,21 @@ class Business extends Component {
 
     render() {
         return (
-            <View>
-                <TopIcons/>
+            <View style={styles.container}>
+                <ScrollView>
+                    <TopIcons />
+                </ScrollView>
             </View>
         );
     }
 }
 
 export default Business;
+
+const styles = {
+    container: {
+        backgroundColor: '#fff',
+        justifyContent: 'center',
+        flex: 1
+    }
+}

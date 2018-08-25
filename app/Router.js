@@ -11,9 +11,9 @@ class AppRouter extends Component {
 
     render() {
         return (
-            <View>
-                <Business/>
-            </View>
+
+            <Business />
+
         );
     }
 }
