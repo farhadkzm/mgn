@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, ScrollView } from 'react-native';
 import TopIcons from './TopIcons';
+import MainProperties from './MainProperties';
 
 class Business extends Component {
     constructor(props) {
@@ -14,6 +15,9 @@ class Business extends Component {
             <View style={styles.container}>
                 <ScrollView>
                     <TopIcons />
+
+                    <MainProperties />
+
                 </ScrollView>
             </View>
         );
