@@ -49,7 +49,7 @@ const styles = {
         fontWeight: 'bold',
         color: '#000',
         fontSize: 16,
-        marginBottom: 3
+        marginBottom: 2
     },
     buttonTextContainer: {
         alignItems: 'center',
