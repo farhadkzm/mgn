@@ -72,49 +72,43 @@ class Business extends Component {
 				<View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' }}>
 					<TouchableOpacity
 						style={{
-							justifyContent: 'center',
-							alignItems: 'center',
-							backgroundColor: '#aaa',
+							backgroundColor: '#f2f6f9',
 							padding: 3,
 							borderRadius: 5,
-							minWidth: '25%'
+							minWidth: '25%',
 						}}
 					>
-						<View style={{}}>
-							<Icon size={18} name="angle-right" />
-							<Text>Call</Text>
+						<View style={{ flex: 1, alignItems: 'center' }}>
+							<Icon size={18} name="phone" style={{ marginBottom: 5 }} color="#0076ff" />
+							<Text style={{ color: '#0076ff' }}>Call</Text>
 						</View>
 					</TouchableOpacity>
 
 					<TouchableOpacity
 						style={{
-							justifyContent: 'center',
-							alignItems: 'center',
-							backgroundColor: '#aaa',
+							backgroundColor: '#f2f6f9',
 							padding: 3,
 							borderRadius: 5,
-							minWidth: '25%'
+							minWidth: '25%',
 						}}
 					>
-						<View style={{}}>
-							<Icon size={18} name="angle-right" />
-							<Text>Email</Text>
+						<View style={{ flex: 1, alignItems: 'center' }}>
+							<Icon size={18} name="envelope" style={{ marginBottom: 5 }} color="#0076ff" />
+							<Text style={{ color: '#0076ff' }}>Email</Text>
 						</View>
 					</TouchableOpacity>
 
 					<TouchableOpacity
 						style={{
-							justifyContent: 'center',
-							alignItems: 'center',
-							backgroundColor: '#aaa',
+							backgroundColor: '#f2f6f9',
 							padding: 3,
 							borderRadius: 5,
 							minWidth: '25%'
 						}}
 					>
-						<View>
-							<Icon size={18} name="angle-right" />
-							<Text>Website</Text>
+						<View style={{ flex: 1, alignItems: 'center' }}>
+							<Icon size={18} name="phone" style={{ marginBottom: 5 }} color="#0076ff" />
+							<Text style={{ color: '#0076ff' }}>Website</Text>
 						</View>
 					</TouchableOpacity>
 				</View>

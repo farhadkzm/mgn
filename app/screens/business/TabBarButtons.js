@@ -4,22 +4,73 @@ import { View, Text, TouchableOpacity } from 'react-native';
 class TabBarButtons extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = {
+			selected: 'details'
+		};
 	}
 
 	render() {
 		return (
 			<View style={styles.container}>
-				<TouchableOpacity style={styles.button}>
-					<Text style={styles.text}> Details </Text>
+				<TouchableOpacity activeOpacity={1}
+					style={[
+						styles.button,
+						{ backgroundColor: this.state.selected === 'details' ? '#0076ff' : 'transparent' }
+					]}
+					onPress={() => {
+						this.setState({ selected: 'details' });
+						// this.props.detailsPress();
+					}}
+				>
+					<Text
+						style={[
+							styles.text,
+							{ color: this.state.selected === 'details' ? '#fff' : '#0076ff' }
+						]}
+					> Details </Text>
 				</TouchableOpacity>
 
-				<TouchableOpacity style={[ styles.button, styles.borderedButton ]}>
-					<Text style={styles.text}> Review </Text>
+				<TouchableOpacity activeOpacity={1}
+					style={[
+						[
+							styles.button,
+							{ backgroundColor: this.state.selected === 'review' ? '#0076ff' : 'transparent' }
+						],
+						styles.borderedButton
+					]}
+					onPress={() => {
+						this.setState({ selected: 'review' });
+						// this.props.reviewPress();
+					}}
+				>
+					<Text
+						style={[
+							styles.text,
+							{ color: this.state.selected === 'review' ? '#fff' : '#0076ff' }
+						]}
+					>
+					Review </Text>
 				</TouchableOpacity>
 
-				<TouchableOpacity style={styles.button}>
-					<Text style={styles.text}> Events </Text>
+				<TouchableOpacity activeOpacity={1}
+					style={[
+						styles.button,
+						{ backgroundColor: this.state.selected === 'events' ? '#0076ff' : 'transparent' }
+					]}
+					onPress={() => {
+						this.setState({ selected: 'events' });
+						// this.props.eventPress();
+					}}
+				>
+					<Text
+						style={[
+							styles.text,
+							{ color: this.state.selected === 'events' ? '#fff' : '#0076ff' }
+						]}
+					>
+						{' '}
+						Events{' '}
+					</Text>
 				</TouchableOpacity>
 			</View>
 		);
@@ -33,11 +84,11 @@ const styles = {
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		alignItems: 'center',
-        borderWidth: 1,
-        borderColor:  '#0076ff',
-        borderRadius: 3,
-        marginHorizontal: 10,
-	},  
+		borderWidth: 1,
+		borderColor: '#0076ff',
+		borderRadius: 3,
+		marginHorizontal: 10
+	},
 	text: {
 		fontWeight: 'bold',
 		color: '#000',
