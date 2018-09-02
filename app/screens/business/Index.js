@@ -7,6 +7,7 @@ import MainProperties from './MainProperties';
 import OtherProperties from './OtherProperties';
 import TabBarButtons from './TabBarButtons';
 import RelatedList from './RelatedList';
+import ReviewTabContent from './ReviewTabContent';
 
 class Business extends Component {
 	constructor(props) {
@@ -169,6 +170,8 @@ class Business extends Component {
 					<TabBarButtons />
 
 					{this.detailsTabContent()}
+
+					<ReviewTabContent/>
 
 					<RelatedList />
 				</ScrollView>
