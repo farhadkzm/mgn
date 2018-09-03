@@ -6,18 +6,22 @@ const screenWidth = Dimensions.get('window').width;
 
 const styles = {
 	img: {
-		width: 50,
-		height: 50,
-		resizeMode: 'cover'
+		width: 60,
+		height: 60,
+		resizeMode: 'cover',
+		marginRight: 5,
+		borderRadius: 5,
 	},
 	textContainer: {
 		flex: 1
 	},
 	itemsContainer: {
-		flexDirection: 'row'
+		flexDirection: 'row',
+		marginBottom: 10
 	},
 	column: {
 		width: screenWidth - 20,
+		
 	}
 };
 
@@ -26,30 +30,38 @@ const ratingProps = {
 	maxStars: 5,
 	starSize: 13,
 	rating: 2,
-	fullStarColor: 'gold',
-	emptyStarColor: '#aaa'
+	fullStarColor: '#848a8a',
+	emptyStarColor: '#848a8a',
+	containerStyle: {
+        alignSelf: 'flex-start'
+    },
+    starStyle: {
+        marginRight: 2,
+    }
 };
 
 const RelatedList = ({ params }) => (
-	<View>
+	<View style={{ paddingHorizontal: 10 }}>
 		<View
 			style={{
 				flexDirection: 'row',
 				justifyContent: 'space-between',
-				alignItems: 'center'
+				alignItems: 'center',
+				width: '100%'
 			}}
 		>
-			<Text>Related</Text>
+			<Text style={{fontWeight: 'bold', fontSize: 16, color:'#010101', marginVertical: 7}}>Related</Text>
 			<Text>See All</Text>
 		</View>
+
 		<ScrollView horizontal showsHorizontalScrollIndicator={false}>
 			<View style={styles.column}>
 				<TouchableOpacity>
 					<View style={styles.itemsContainer}>
 						<Image style={styles.img} source={require('../../assets/images/love.jpg')} />
 						<View style={styles.textContainer}>
-							<Text>Dr. John Smith</Text>
-							<Text>Dr. John Smith</Text>
+							<Text style={{fontWeight: 'bold', color:'#010101'}}>Dr. John Smith</Text>
+							<Text style={{ marginBottom: 3}}>Medical</Text>
 							<StarRating {...ratingProps} disabled />
 						</View>
 					</View>

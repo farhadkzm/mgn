@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, ScrollView, Text, TouchableOpacity, Image, Dimensions, LayoutAnimation } from 'react-native';
+import { View, ScrollView, Text, TouchableOpacity, Image, Dimensions, LayoutAnimation, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 // my components
 import TopIcons from './TopIcons';
@@ -73,8 +73,8 @@ class Business extends Component {
 				<View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' }}>
 					<TouchableOpacity
 						style={{
-							backgroundColor: '#f2f6f9',
-							padding: 3,
+							backgroundColor: '#f0eff5',
+							padding: 4,
 							borderRadius: 5,
 							minWidth: '25%',
 						}}
@@ -87,8 +87,8 @@ class Business extends Component {
 
 					<TouchableOpacity
 						style={{
-							backgroundColor: '#f2f6f9',
-							padding: 3,
+							backgroundColor: '#f0eff5',
+							padding: 4,
 							borderRadius: 5,
 							minWidth: '25%',
 						}}
@@ -101,14 +101,14 @@ class Business extends Component {
 
 					<TouchableOpacity
 						style={{
-							backgroundColor: '#f2f6f9',
-							padding: 3,
+							backgroundColor: '#f0eff5',
+							padding: 4,
 							borderRadius: 5,
 							minWidth: '25%'
 						}}
 					>
 						<View style={{ flex: 1, alignItems: 'center' }}>
-							<Icon size={18} name="phone" style={{ marginBottom: 5 }} color="#0076ff" />
+							<Icon size={22} name="compass" style={{ marginBottom: 5 }} color="#0076ff" />
 							<Text style={{ color: '#0076ff' }}>Website</Text>
 						</View>
 					</TouchableOpacity>
@@ -129,7 +129,7 @@ class Business extends Component {
 					/>
 				</ScrollView>
 
-				<View>
+				<View style={{ paddingHorizontal: 10 }}>
 					<Text style={tabContentStyles.descriptionTitle}>Description</Text>
 					<View style={tabContentStyles.ellipsContainer}>
 						<Text style={tabContentStyles.ellipsText} numberOfLines={tabContentStyles.numberOfLines}>
@@ -157,7 +157,26 @@ class Business extends Component {
 		);
 	};
 
+	reviewPress = () => {
+		this.setState({
+			tab: 'review'
+		})
+	}
+
+	detailsPress = () => {
+		this.setState({
+			tab: 'detail'
+		})
+	}
+
+	eventPress = () => {
+		this.setState({
+			tab: 'event'
+		})
+	}
+
 	render() {
+		console.log(this.state)
 		return (
 			<View style={styles.container}>
 				<ScrollView showsVerticalScrollIndicator={false}>
@@ -167,11 +186,17 @@ class Business extends Component {
 
 					<OtherProperties />
 
-					<TabBarButtons />
+					<TabBarButtons
+						reviewPress={() => this.reviewPress()}
+						detailsPress={() => this.detailsPress()}
+						eventPress={() => this.eventPress()}
+					/>
 
 					{this.detailsTabContent()}
 
-					<ReviewTabContent/>
+					{/* <ReviewTabContent /> */}
+
+
 
 					<RelatedList />
 				</ScrollView>
@@ -187,5 +212,15 @@ const styles = {
 		backgroundColor: '#fff',
 		justifyContent: 'center',
 		flex: 1
+	},
+	image: {
+		width: 45,
+		height: 45,
+		borderRadius: 45,
+		resizeMode: 'cover',
+		margin: 5,
+		borderWidth: 1,
+		borderColor: '#c4c4c5',
+
 	}
 };

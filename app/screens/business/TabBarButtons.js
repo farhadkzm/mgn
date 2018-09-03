@@ -19,7 +19,7 @@ class TabBarButtons extends Component {
 					]}
 					onPress={() => {
 						this.setState({ selected: 'details' });
-						// this.props.detailsPress();
+						this.props.detailsPress();
 					}}
 				>
 					<Text
@@ -40,7 +40,7 @@ class TabBarButtons extends Component {
 					]}
 					onPress={() => {
 						this.setState({ selected: 'review' });
-						// this.props.reviewPress();
+						this.props.reviewPress();
 					}}
 				>
 					<Text
@@ -59,7 +59,7 @@ class TabBarButtons extends Component {
 					]}
 					onPress={() => {
 						this.setState({ selected: 'events' });
-						// this.props.eventPress();
+						this.props.eventPress();
 					}}
 				>
 					<Text
@@ -87,7 +87,8 @@ const styles = {
 		borderWidth: 1,
 		borderColor: '#0076ff',
 		borderRadius: 3,
-		marginHorizontal: 10
+		marginHorizontal: 10,
+		marginBottom: 20,
 	},
 	text: {
 		fontWeight: 'bold',
