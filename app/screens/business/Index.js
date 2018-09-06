@@ -192,9 +192,9 @@ class Business extends Component {
 						eventPress={() => this.eventPress()}
 					/>
 
-					{this.detailsTabContent()}
+					{/* {this.detailsTabContent()} */}
 
-					{/* <ReviewTabContent /> */}
+					<ReviewTabContent />
 
 
 

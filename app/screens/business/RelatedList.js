@@ -20,8 +20,8 @@ const styles = {
 		marginBottom: 10
 	},
 	column: {
-		width: screenWidth - 20,
-		
+		width: screenWidth - 40,
+
 	}
 };
 
@@ -33,15 +33,15 @@ const ratingProps = {
 	fullStarColor: '#848a8a',
 	emptyStarColor: '#848a8a',
 	containerStyle: {
-        alignSelf: 'flex-start'
-    },
-    starStyle: {
-        marginRight: 2,
-    }
+		alignSelf: 'flex-start'
+	},
+	starStyle: {
+		marginRight: 2,
+	}
 };
 
 const RelatedList = ({ params }) => (
-	<View style={{ paddingHorizontal: 10 }}>
+	<View style={{ paddingHorizontal: 10, marginTop: 10 }}>
 		<View
 			style={{
 				flexDirection: 'row',
@@ -50,7 +50,7 @@ const RelatedList = ({ params }) => (
 				width: '100%'
 			}}
 		>
-			<Text style={{fontWeight: 'bold', fontSize: 16, color:'#010101', marginVertical: 7}}>Related</Text>
+			<Text style={{ fontWeight: 'bold', fontSize: 16, color: '#010101', marginVertical: 7 }}>Related</Text>
 			<Text>See All</Text>
 		</View>
 
@@ -60,28 +60,36 @@ const RelatedList = ({ params }) => (
 					<View style={styles.itemsContainer}>
 						<Image style={styles.img} source={require('../../assets/images/love.jpg')} />
 						<View style={styles.textContainer}>
-							<Text style={{fontWeight: 'bold', color:'#010101'}}>Dr. John Smith</Text>
-							<Text style={{ marginBottom: 3}}>Medical</Text>
+							<Text style={{ fontWeight: 'bold', color: '#010101' }}>Dr. John Smith</Text>
+							<Text style={{ marginBottom: 3 }}>Medical</Text>
 							<StarRating {...ratingProps} disabled />
 						</View>
 					</View>
 				</TouchableOpacity>
+
 				<TouchableOpacity>
 					<View style={styles.itemsContainer}>
 						<Image style={styles.img} source={require('../../assets/images/love.jpg')} />
 						<View style={styles.textContainer}>
-							<Text>Dr. John Smith</Text>
+							<Text style={{ fontWeight: 'bold', color: '#010101' }}>Dr. John Smith</Text>
+							<Text style={{ marginBottom: 3 }}>Medical</Text>
+							<StarRating {...ratingProps} disabled />
 						</View>
 					</View>
 				</TouchableOpacity>
+
 				<TouchableOpacity>
 					<View style={styles.itemsContainer}>
 						<Image style={styles.img} source={require('../../assets/images/love.jpg')} />
 						<View style={styles.textContainer}>
-							<Text>Dr. John Smith</Text>
+							<Text style={{ fontWeight: 'bold', color: '#010101' }}>Dr. John Smith</Text>
+							<Text style={{ marginBottom: 3 }}>Medical</Text>
+							<StarRating {...ratingProps} disabled />
 						</View>
 					</View>
 				</TouchableOpacity>
+
+
 			</View>
 
 			<View style={styles.column}>
@@ -89,29 +97,38 @@ const RelatedList = ({ params }) => (
 					<View style={styles.itemsContainer}>
 						<Image style={styles.img} source={require('../../assets/images/love.jpg')} />
 						<View style={styles.textContainer}>
-							<Text>Dr. John Smith</Text>
-							<Text>Dr. John Smith</Text>
+							<Text style={{ fontWeight: 'bold', color: '#010101' }}>Dr. John Smith</Text>
+							<Text style={{ marginBottom: 3 }}>Medical</Text>
 							<StarRating {...ratingProps} disabled />
 						</View>
 					</View>
 				</TouchableOpacity>
+
 				<TouchableOpacity>
 					<View style={styles.itemsContainer}>
 						<Image style={styles.img} source={require('../../assets/images/love.jpg')} />
 						<View style={styles.textContainer}>
-							<Text>Dr. John Smith</Text>
+							<Text style={{ fontWeight: 'bold', color: '#010101' }}>Dr. John Smith</Text>
+							<Text style={{ marginBottom: 3 }}>Medical</Text>
+							<StarRating {...ratingProps} disabled />
 						</View>
 					</View>
 				</TouchableOpacity>
+
 				<TouchableOpacity>
 					<View style={styles.itemsContainer}>
 						<Image style={styles.img} source={require('../../assets/images/love.jpg')} />
 						<View style={styles.textContainer}>
-							<Text>Dr. John Smith</Text>
+							<Text style={{ fontWeight: 'bold', color: '#010101' }}>Dr. John Smith</Text>
+							<Text style={{ marginBottom: 3 }}>Medical</Text>
+							<StarRating {...ratingProps} disabled />
 						</View>
 					</View>
 				</TouchableOpacity>
+
+
 			</View>
+
 		</ScrollView>
 	</View>
 );
