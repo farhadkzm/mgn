@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-heart2);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        fill: rgba(255,255,255,0);
+      }
+
+      .cls-5 {
+        filter: url(#Path_6);
+      }
+    </style>
+    <filter id="Path_6" x="-6" y="-5" width="52" height="52" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-color="#ff4d8b" flood-opacity="0.239"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff6dec"/>
+      <stop offset="1" stop-color="#ff4470"/>
+    </linearGradient>
+    <clipPath id="clip-heart2">
+      <rect width="40" height="40"/>
+    </clipPath>
+  </defs>
+  <g id="heart2" class="cls-1">
+    <rect class="cls-4" width="40" height="40"/>
+    <g id="heart_1_" data-name="heart (1)">
+      <g class="cls-5" transform="matrix(1, 0, 0, 1, 0, 0)">
+        <path id="Path_6-2" data-name="Path 6" class="cls-2" d="M40,20A20,20,0,1,1,20,0,20,20,0,0,1,40,20Zm0,0"/>
+      </g>
+      <path id="Path_7" data-name="Path 7" class="cls-3" d="M70.082,139.582a1.058,1.058,0,0,1-.547-.153C60.174,133.758,56,128.962,56,123.879a8.506,8.506,0,0,1,2.077-5.671,7.247,7.247,0,0,1,5.492-2.462,7.342,7.342,0,0,1,5.922,3.013,10.1,10.1,0,0,1,.591.845,10.1,10.1,0,0,1,.591-.845,7.342,7.342,0,0,1,5.922-3.013,7.248,7.248,0,0,1,5.492,2.462,8.505,8.505,0,0,1,2.077,5.671c0,5.083-4.174,9.879-13.535,15.55a1.058,1.058,0,0,1-.547.153Z" transform="translate(-50.285 -105.46)"/>
+    </g>
+  </g>
+</svg>

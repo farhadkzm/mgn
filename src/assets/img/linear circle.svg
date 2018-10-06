@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 9 9">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-linear_circle);
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #707070;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-5 {
+        fill: rgba(255,255,255,0);
+      }
+    </style>
+    <clipPath id="clip-linear_circle">
+      <rect width="9" height="9"/>
+    </clipPath>
+  </defs>
+  <g id="linear_circle" data-name="linear circle" class="cls-1">
+    <rect class="cls-5" width="9" height="9"/>
+    <g id="Ellipse_1" data-name="Ellipse 1" class="cls-2">
+      <circle class="cls-3" cx="4.5" cy="4.5" r="4.5"/>
+      <circle class="cls-4" cx="4.5" cy="4.5" r="4"/>
+    </g>
+  </g>
+</svg>

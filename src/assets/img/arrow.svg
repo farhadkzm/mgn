@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 10.21 10.21">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-arrow);
+      }
+
+      .cls-2 {
+        fill: #4fa1ff;
+      }
+
+      .cls-3 {
+        fill: rgba(255,255,255,0);
+      }
+    </style>
+    <clipPath id="clip-arrow">
+      <rect width="10.21" height="10.21"/>
+    </clipPath>
+  </defs>
+  <g id="arrow" class="cls-1">
+    <rect class="cls-3" width="10.21" height="10.21"/>
+    <g id="chevron" transform="translate(-350.969 -797)">
+      <path id="chevron-2" data-name="chevron" class="cls-2" d="M5.773,7.216V1.443H0V0H7.216V7.216Z" transform="translate(354.071 797) rotate(45)"/>
+    </g>
+  </g>
+</svg>
