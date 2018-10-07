@@ -44,7 +44,6 @@ const AppRouter = () => (
         <Modal key="modal" hideNavBar>
           <Lightbox key="lightbox">
             <Stack hideNavBar key="root" titleStyle={{ alignSelf: "center" }}>
-              
               <Drawer
                 hideNavBar
                 key="drawer"
@@ -53,8 +52,13 @@ const AppRouter = () => (
                 initial={true}
                 drawerPosition="right"
               >
-              <Scene component={Login} hideNavBar key='login' initial={true} />
-                <Scene hideNavBar>
+                <Scene
+                  component={Login}
+                  hideNavBar
+                  key="login"
+                  initial={false}
+                />
+                <Scene hideNavBar initial={true}>
                   <Tabs
                     key="tabbar"
                     swipeEnabled

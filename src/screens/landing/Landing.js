@@ -11,11 +11,11 @@ import {
   Platform,
   StyleSheet
 } from "react-native";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import ImageSwiper from "./ImageSwiper";
 import Promoted from "./Promoted";
 import Categories from "./Categories";
 import Recent from "./Recent";
+import SvgUri from "react-native-svg-uri";
 
 const STATUSBAR_HEIGHT = Platform.OS === "ios" ? 20 : StatusBar.currentHeight;
 const APPBAR_HEIGHT = Platform.OS === "ios" ? 44 : 56;
@@ -25,8 +25,6 @@ const MyStatusBar = ({ backgroundColor, ...props }) => (
     <StatusBar translucent backgroundColor={backgroundColor} {...props} />
   </View>
 );
-
-
 
 class Landing extends Component {
   constructor(props) {
@@ -65,8 +63,7 @@ class Landing extends Component {
         flexDirection: "row",
         marginHorizontal: 25,
         marginTop: 27,
-        marginBottom: 25,
-        
+        marginBottom: 25
       },
       input: {
         shadowColor: "rgb(52,52,52)",
@@ -85,15 +82,13 @@ class Landing extends Component {
       leftIcon: {
         position: "absolute",
         left: 27,
-        color: "rgb(255,109,236)",
         top: 14,
-        fontSize: 15,
         elevation: 2
       },
       filterButton: {
         position: "absolute",
         right: 26,
-        top: 10,
+        top: 12,
         elevation: 2
       },
       filterIcon: {
@@ -107,11 +102,24 @@ class Landing extends Component {
           style={searchFormStyle.input}
           placeholder="Browse by location..."
           placeholderTextColor="rgb(161,161,161)"
-          underlineColorAndroid='transparent'
+          underlineColorAndroid="transparent"
         />
-        <Icon name="map-marker-radius" style={searchFormStyle.leftIcon} />
+
+        <SvgUri
+          width="17"
+          height="17"
+          source={require("../../assets/img/pin.svg")}
+          style={searchFormStyle.leftIcon}
+          fill="rgb(255,109,236)"
+        />
+
         <TouchableOpacity style={searchFormStyle.filterButton}>
-          <Icon style={searchFormStyle.filterIcon} name="filter" />
+          <SvgUri
+            width="20"
+            height="20"
+            source={require("../../assets/img/filter.svg")}
+            fill="rgb(112,112,112)"
+          />
         </TouchableOpacity>
       </View>
     );
@@ -131,7 +139,7 @@ class Landing extends Component {
         <View
           style={{
             marginVertical: 20,
-            borderBottomWidth: 1,
+            borderBottomWidth: 0.7,
             marginHorizontal: 16,
             borderColor: "rgb(183,183,183)"
           }}
@@ -139,10 +147,11 @@ class Landing extends Component {
 
         <Promoted />
 
-         <View
+        <View
           style={{
-            marginVertical: 20,
-            borderBottomWidth: 1,
+            marginBottom: 25,
+            marginTop: 10,
+            borderBottomWidth: 0.7,
             marginHorizontal: 16,
             borderColor: "rgb(183,183,183)"
           }}
@@ -150,18 +159,17 @@ class Landing extends Component {
 
         <Categories />
 
-         <View
+        <View
           style={{
-            marginVertical: 20,
-            borderBottomWidth: 1,
+            marginBottom: 25,
+            marginTop: 10,
+            borderBottomWidth: 0.7,
             marginHorizontal: 16,
             borderColor: "rgb(183,183,183)"
           }}
         />
 
-        <Recent/>
-
-
+        <Recent />
       </ScrollView>
     );
   }

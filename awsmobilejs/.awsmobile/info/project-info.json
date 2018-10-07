@@ -1,0 +1,18 @@
+{
+	"ProjectName": "Magny",
+	"ProjectPath": "/Users/Mohammad/Desktop/Test/Magny",
+	"InitializationTime": "",
+	"LastConfigurationTime": "2018-10-08-01-09-29",
+	"LastNPMInstallTime": "",
+	"FrontendLastBuildTime": "",
+	"LastPublishTime": "",
+	"BackendLastSyncTime": "",
+	"BackendLastBuildTime": "",
+	"BackendLastPushTime": "",
+	"BackendProjectID": "82a6bd4f-9129-4f73-8db3-e592074369b2",
+	"BackendProjectName": "grudges-2018-10-06-16-52-30",
+	"BackendProjectConsoleUrl": "https://console.aws.amazon.com/mobilehub/home#/82a6bd4f-9129-4f73-8db3-e592074369b2/build",
+	"BackendProjectCreationTime": "2018-10-06T06:52:36.820Z",
+	"BackendProjectLastUpdatedTime": "2018-10-06T13:11:02.436Z",
+	"Framework": "react-native"
+}

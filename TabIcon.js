@@ -21,7 +21,7 @@ const TabIcon = props => {
         shadowColor: "rgb(128,230,216)",
         shadowOffset: { width: 0, height: 3 },
         shadowOpacity: 1,
-        shadowRadius: 15,
+        shadowRadius: 10,
         elevation: 5,
         zIndex: 1000
       };

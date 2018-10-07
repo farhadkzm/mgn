@@ -29,26 +29,26 @@ class ImageSwiper extends Component {
   // };
 
   get pagination() {
-    const { entries, activeSlide } = this.state;
     return (
       <Pagination
         dotsLength={3}
         activeDotIndex={this.state.activeSlide}
         inactiveDotScale={1}
         containerStyle={{
-          backgroundColor: "rgba(0, 0, 0, 0)"
+          backgroundColor: "rgba(0, 0, 0, 0)",
+          top: -24
         }}
         dotStyle={{
           width: 9,
           height: 9,
           borderRadius: 5,
           borderWidth: 1,
-          borderColor: "rgb(141, 141, 141)" ,
+          borderColor: "rgb(141, 141, 141)",
           backgroundColor: "rgb(141, 141, 141)",
           marginHorizontal: -10
         }}
         inactiveDotStyle={{
-          backgroundColor: "#fff",
+          backgroundColor: "#fff"
         }}
       />
     );
@@ -56,7 +56,17 @@ class ImageSwiper extends Component {
 
   _renderItem = ({ item, index }) => {
     return (
-      <View style={{elevation:3}} key={index}>
+      <View
+        style={{
+          elevation: 3,
+          shadowColor: "rgba(0,0,0,1)",
+          shadowOffset: { width: 0, height: 4 },
+          shadowOpacity: 0.3,
+          shadowRadius: 10,
+          marginBottom: 20
+        }}
+        key={index}
+      >
         <Image style={styles.sliderImage} source={item} />
         <LinearGradient
           colors={["rgba(0,0,0,0)", "rgba(0,0,0,0.4)"]}
@@ -99,7 +109,6 @@ class ImageSwiper extends Component {
             />
             <Text style={{ color: "#fff" }}>NY, Jordan ave</Text>
           </View>
-        
         </LinearGradient>
       </View>
     );

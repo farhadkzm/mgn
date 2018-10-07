@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     ...ifIphoneX(
       {
-        paddingTop: 20,
+        paddingTop: 0,
        
       },
       {

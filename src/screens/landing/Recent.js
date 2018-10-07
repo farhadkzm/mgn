@@ -1,6 +1,14 @@
 import React, { Component } from "react";
-import { View, Text, Image, Dimensions, TouchableOpacity, Platform } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  Dimensions,
+  TouchableOpacity,
+  Platform
+} from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import SvgUri from "react-native-svg-uri";
 
 class RecentItem extends Component {
   constructor(props) {
@@ -26,7 +34,7 @@ class RecentItem extends Component {
         position: "absolute",
         top: (screenWidth - 52) * 0.65 - 52,
         alignSelf: "center",
-        elevation:2
+        elevation: 2
       };
     }
     return {
@@ -43,7 +51,7 @@ class RecentItem extends Component {
       position: "absolute",
       top: (screenWidth - 52) * 0.65 - 52,
       alignSelf: "center",
-      elevation:2
+      elevation: 2
     };
   };
 
@@ -78,7 +86,7 @@ class RecentItem extends Component {
     return (
       <View
         style={{
-          marginBottom: Platform.OS === 'ios' ? 30: 30,
+          marginBottom: Platform.OS === "ios" ? 30 : 30,
           backgroundColor: "#fff",
           shadowColor: "rgb(52,52,52)",
           shadowOffset: { width: 0, height: 1 },
@@ -101,7 +109,12 @@ class RecentItem extends Component {
           {/* event name */}
           <View style={styles.eventNameRow}>
             <Text style={styles.eventNameText}>Event Name</Text>
-            <Icon name="bookmark-outline" size={28} />
+            <SvgUri
+              fill="red"
+              width="25"
+              height="25"
+              source={require("../../assets/img/bookmark.svg")}
+            />
           </View>
 
           {/* business name */}
@@ -111,10 +124,11 @@ class RecentItem extends Component {
             {/* right side */}
             <View style={{ flexDirection: "row" }}>
               <View style={styles.businessRowRightContainer}>
-                <Icon
-                  size={12}
-                  color="rgb(161,161,161)"
-                  name="comment-outline"
+                <SvgUri
+                  fill='rgb(161,161,161)'
+                  width="12"
+                  height="10"
+                  source={require("../../assets/img/comment.svg")}
                 />
                 <Text style={styles.businessRowRightText}>13</Text>
               </View>
@@ -168,7 +182,7 @@ class Recent extends Component {
             justifyContent: "space-between",
             alignItems: "center",
             width: "100%",
-            marginBottom: 39
+            marginBottom: 20
           }}
         >
           <Text
@@ -208,20 +222,21 @@ const styles = {
     top: -32,
     paddingTop: 10,
     paddingHorizontal: 16,
-    paddingBottom: 10,
+    paddingBottom: 10
   },
   eventNameRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 30
+    marginBottom: 30,
+    paddingTop: 5
   },
   eventNameText: {
     fontSize: 17,
     color: "rgb(112,112,112)",
     lineHeight: 20,
     fontWeight: "500",
-    top: 16
+    top: 10
   },
   businessNameText: {
     color: "rgb(79,161,255)",
@@ -242,7 +257,7 @@ const styles = {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    borderBottomWidth: 1,
+    borderBottomWidth: 0.4,
     borderBottomColor: "rgb(161,161,161)",
     paddingBottom: 10,
     marginBottom: 15

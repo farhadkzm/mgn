@@ -17,7 +17,7 @@ const styles = {
     width: 70,
     height: 70,
     resizeMode: "cover",
-    borderRadius: 10,
+    borderRadius: 10
   },
   imgContainer: {
     borderRadius: 10,
@@ -36,7 +36,7 @@ const styles = {
     flexDirection: "row"
   },
   column: {
-    width: screenWidth - 80,
+    width: screenWidth - 65,
     marginRight: 20
   }
 };
@@ -58,7 +58,10 @@ const ratingProps = {
 
 const PromotedItem = () => {
   return (
-    <TouchableOpacity activeOpacity={1} style={{ paddingBottom: 3, marginBottom: 15 }}>
+    <TouchableOpacity
+      activeOpacity={1}
+      style={{ paddingBottom: 3, marginBottom: 15 }}
+    >
       <View style={styles.itemsContainer}>
         <View style={styles.imgContainer}>
           <Image
@@ -97,6 +100,8 @@ const PromotedItem = () => {
                 emptyStar="star-outline"
                 fullStar="star"
                 containerStyle={{ alignSelf: "flex-start" }}
+                buttonStyle={{ margin: 0, width: 12 }}
+                starStyle={{ padding:0 }}
                 starSize={14}
                 fullStarColor="rgb(254,222,0)"
                 emptyStarColor="rgb(141,141,141)"
@@ -159,7 +164,7 @@ class Promoted extends React.Component {
               color: "rgb(62,62,62)"
             }}
           >
-            Promoted Businesses
+            Promoted Services
           </Text>
           <View
             style={{

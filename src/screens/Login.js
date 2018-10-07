@@ -12,6 +12,8 @@ import LinearGradient from "react-native-linear-gradient";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const screenWidth = Dimensions.get("window").width;
+const screenHeight = Dimensions.get("window").height;
+
 
 class Login extends Component {
   constructor(props) {
@@ -25,14 +27,14 @@ class Login extends Component {
         <StatusBar hidden />
         <Image
           style={styles.backgroundImage}
-          source={require("../assets/img/loginbg.png")}
+          source={require("../assets/img/newbg3x.png")}
         />
 
         <SvgUri
           width={screenWidth - 108}
           height={screenWidth - 108}
-          style={{ backgroundColor: "transparent" }}
-          source={require("../assets/img/loginlogo.svg")}
+          style={{ backgroundColor: "white" }}
+          source={require("../assets/img/logo2.svg")}
         />
 
         <View>
@@ -107,7 +109,8 @@ const styles = {
     left: 0,
     flex: 1,
     resizeMode: "cover",
-    width: screenWidth
+    width: screenWidth,
+    height: screenHeight
   },
   loginButtonText: {
     color: "#fff",

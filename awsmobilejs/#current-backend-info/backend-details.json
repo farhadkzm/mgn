@@ -1,0 +1,306 @@
+{
+	"name": "grudges-2018-10-06-16-52-30",
+	"projectId": "82a6bd4f-9129-4f73-8db3-e592074369b2",
+	"region": "us-east-1",
+	"state": "NORMAL",
+	"createdDate": "2018-10-06T06:52:36.820Z",
+	"lastUpdatedDate": "2018-10-06T13:11:02.436Z",
+	"consoleUrl": "https://console.aws.amazon.com/mobilehub/home#/82a6bd4f-9129-4f73-8db3-e592074369b2/build",
+	"resources": [
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "grudges_nosqldatabase_MOBILEHUB_1439586377",
+			"arn": null,
+			"feature": "database",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "3675826a-f6cf-491f-8ee2-fa878457a735",
+				"role": "grudges_auth_MOBILEHUB_1439586377"
+			}
+		},
+		{
+			"type": "AWS::DynamoDB::Table",
+			"name": "grudges-mobilehub-1439586377-grudges",
+			"arn": "arn:aws:dynamodb:us-east-1:048683963026:table/grudges-mobilehub-1439586377-grudges",
+			"feature": "database",
+			"attributes": {
+				"lastUpdateRequestID": "496521e5-860f-4f7c-adac-7a88e7920936"
+			}
+		},
+		{
+			"type": "AWS::Cognito::IdentityPool",
+			"name": "grudges_MOBILEHUB_1439586377",
+			"arn": "us-east-1:d73a6779-d901-48ed-9748-7ec056f1a705",
+			"feature": "user-signin",
+			"attributes": {
+				"lastUpdateRequestID": "d6ea53a5-e978-4f12-a49a-dde868cb0da6",
+				"poolid": "us-east-1:d73a6779-d901-48ed-9748-7ec056f1a705",
+				"roleARNs": "arn:aws:iam::048683963026:role/grudges_auth_MOBILEHUB_1439586377"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "grudges_smsverification_MOBILEHUB_1439586377",
+			"arn": "arn:aws:iam::048683963026:role/service-role/grudges_smsverification_MOBILEHUB_1439586377",
+			"feature": "user-signin",
+			"attributes": {
+				"lastUpdateRequestID": "d6ea53a5-e978-4f12-a49a-dde868cb0da6",
+				"user-pools-role-key": "user-pools-execution-role"
+			}
+		},
+		{
+			"type": "AWS::Cognito::UserPool",
+			"name": "grudges_userpool_MOBILEHUB_1439586377",
+			"arn": "us-east-1_cYvIzS0q8",
+			"feature": "user-signin",
+			"attributes": {
+				"alias-attributes": "[\"preferred_username\"]",
+				"lastUpdateRequestID": "d6ea53a5-e978-4f12-a49a-dde868cb0da6",
+				"mfa-configuration": "OFF",
+				"password-policy": "{\"minimumLength\":8,\"requireUppercase\":true,\"requireLowercase\":true,\"requireNumbers\":true,\"requireSymbols\":false}",
+				"region": "us-east-1",
+				"user-pools-client-id": "5qa6pj38f8f61sglpuhs6b7vl6",
+				"user-pools-client-secret": "68qopclpohkh65qojh065jhev1gae3je0ugbogb9fpottam783s",
+				"user-pools-id": "us-east-1_cYvIzS0q8",
+				"user-pools-web-client-id": "214ocf27kqma0udvgfcppt5piv"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "grudges_auth_MOBILEHUB_1439586377",
+			"arn": "arn:aws:iam::048683963026:role/grudges_auth_MOBILEHUB_1439586377",
+			"feature": "user-signin",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "d6ea53a5-e978-4f12-a49a-dde868cb0da6"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "grudges-hosting-mobilehub-1439586377",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"lastUpdateRequestID": "5aa6e445-037a-4503-8205-6f23aaba8dac",
+				"region": "us-east-1",
+				"s3-bucket-console-url": "https://s3.console.aws.amazon.com/s3/buckets/grudges-hosting-mobilehub-1439586377",
+				"s3-bucket-website-url": "https://s3.amazonaws.com/grudges-hosting-mobilehub-1439586377"
+			}
+		},
+		{
+			"type": "AWS::CloudFront::Distribution",
+			"name": "d3o8xwkyr8q5l1.cloudfront.net",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"id": "EVCA69FH77UOY",
+				"lastUpdateRequestID": "5aa6e445-037a-4503-8205-6f23aaba8dac"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "grudges_hosting_MOBILEHUB_1439586377",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "3675826a-f6cf-491f-8ee2-fa878457a735",
+				"role": "grudges_auth_MOBILEHUB_1439586377"
+			}
+		},
+		{
+			"type": "AWS::S3::File",
+			"name": "grudgesCRUD/api/grudgesCRUD.json",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"eTag": "bc088c90ff2e0eefdc14ce6b725f0f54",
+				"lastUpdateRequestID": "3675826a-f6cf-491f-8ee2-fa878457a735",
+				"versionID": "z.lAZgXuVs4O7gsdqOQHPMxGxAxO2hIU"
+			}
+		},
+		{
+			"type": "AWS::S3::File",
+			"name": "uploads/grudges-20181006230712.zip",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"eTag": "a4ee1a0c79a4d26403f7d37b47edfb48-3",
+				"lastUpdateRequestID": "3675826a-f6cf-491f-8ee2-fa878457a735",
+				"versionID": "Nskv0ZQlOfuzMTDcJvBFzNHa5wrp_Z_S"
+			}
+		},
+		{
+			"type": "AWS::ApiGateway::RestApi",
+			"name": "grudgesCRUD-MobileHub-1439586377",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"cfLogicalID": "grudgesCRUDMobileHub1439586377",
+				"cfPhysicalID": "uryz86096a",
+				"configApiName": "grudgesCRUD",
+				"deeplinkURL": "https://console.aws.amazon.com/apigateway/home?region=us-east-1#/apis/uryz86096a/resources",
+				"lastUpdateTimestamp": "1538831534950",
+				"reason": "none",
+				"region": "us-east-1",
+				"status": "CREATE_COMPLETE"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "MOBILEHUB-1439586377-Developme-lambdaexecutionrole-1KLSDAN33PSR",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"cfLogicalID": "lambdaexecutionrole",
+				"cfPhysicalID": "MOBILEHUB-1439586377-Developme-lambdaexecutionrole-1KLSDAN33PSR",
+				"deeplinkURL": "https://console.aws.amazon.com/iam/home?region=us-east-1#roles/MOBILEHUB-1439586377-Developme-lambdaexecutionrole-1KLSDAN33PSR",
+				"lastUpdateTimestamp": "1538831522724",
+				"reason": "none",
+				"region": "us-east-1",
+				"status": "CREATE_COMPLETE"
+			}
+		},
+		{
+			"type": "AWS::CloudFormation::Stack",
+			"name": "arn:aws:cloudformation:us-east-1:048683963026:stack/MOBILEHUB-1439586377-Development-CloudLogic-7GZSXJ93GVJ6/5ef51830-c969-11e8-ae07-5044334e0ab3",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"cfLogicalID": "CloudLogic",
+				"cfPhysicalID": "arn:aws:cloudformation:us-east-1:048683963026:stack/MOBILEHUB-1439586377-Development-CloudLogic-7GZSXJ93GVJ6/5ef51830-c969-11e8-ae07-5044334e0ab3",
+				"deeplinkURL": "https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stack/detail?stackId=arn:aws:cloudformation:us-east-1:048683963026:stack/MOBILEHUB-1439586377-Development-CloudLogic-7GZSXJ93GVJ6/5ef51830-c969-11e8-ae07-5044334e0ab3",
+				"lastUpdateTimestamp": "1538831565872",
+				"reason": "none",
+				"region": "us-east-1",
+				"status": "CREATE_COMPLETE"
+			}
+		},
+		{
+			"type": "AWS::ApiGateway::Deployment",
+			"name": "grudgesCRUD-Developmentbc088c90ff2e0eef-MobileHub-1439586377",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"cfLogicalID": "grudgesCRUDDevelopmentbc088c90ff2e0eefMobileHub1439586377",
+				"cfPhysicalID": "bg1mqs",
+				"lastUpdateTimestamp": "1538831538088",
+				"reason": "none",
+				"region": "us-east-1",
+				"status": "CREATE_COMPLETE"
+			}
+		},
+		{
+			"type": "AWS::Lambda::Function",
+			"name": "grudgesCRUD-grudges-mobilehub-1439586377",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"cfLogicalID": "grudgesCRUDgrudgesmobilehub1439586377",
+				"cfPhysicalID": "grudgesCRUD-grudges-mobilehub-1439586377",
+				"configApiName": "grudgesCRUD",
+				"configHandlerName": "grudges",
+				"deeplinkURL": "https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/grudgesCRUD-grudges-mobilehub-1439586377",
+				"lastUpdateTimestamp": "1538831539202",
+				"reason": "none",
+				"region": "us-east-1",
+				"status": "CREATE_COMPLETE"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "MOBIL-lamb-PGSZX6UAV39R",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"cfLogicalID": "lambdaexecutionpolicy",
+				"cfPhysicalID": "MOBIL-lamb-PGSZX6UAV39R",
+				"lastUpdateTimestamp": "1538831531066",
+				"reason": "none",
+				"region": "us-east-1",
+				"status": "CREATE_COMPLETE"
+			}
+		},
+		{
+			"type": "AWS::Lambda::Alias",
+			"name": "grudgesCRUD-grudges-Development-mobilehub-1439586377",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"cfLogicalID": "DevelopmentgrudgesCRUDgrudgesaliasmobilehub1439586377",
+				"cfPhysicalID": "arn:aws:lambda:us-east-1:048683963026:function:grudgesCRUD-grudges-mobilehub-1439586377:Development",
+				"deeplinkURL": "https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/grudgesCRUD-grudges-mobilehub-1439586377/Development",
+				"lastUpdateTimestamp": "1538831541938",
+				"reason": "none",
+				"region": "us-east-1",
+				"status": "CREATE_COMPLETE"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "MOBIL-Poli-15C0GEF1220ET",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"cfLogicalID": "PolicygrudgesCRUDMobileHub1439586377",
+				"cfPhysicalID": "MOBIL-Poli-15C0GEF1220ET",
+				"lastUpdateTimestamp": "1538831547601",
+				"reason": "none",
+				"region": "us-east-1",
+				"status": "CREATE_COMPLETE"
+			}
+		},
+		{
+			"type": "AWS::ApiGateway::Stage",
+			"name": "grudgesCRUD-Development-MobileHub-1439586377",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"cfLogicalID": "grudgesCRUDDevelopmentMobileHub1439586377",
+				"cfPhysicalID": "Development",
+				"lastUpdateTimestamp": "1538831547425",
+				"reason": "none",
+				"region": "us-east-1",
+				"status": "CREATE_COMPLETE"
+			}
+		},
+		{
+			"type": "AWS::Lambda::Permission",
+			"name": "MOBILEHUB-1439586377-Development-CloudLogic-grudgesCRUDgrudgespermissionmobilehub14395-1ATVZ2UX7460O",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"cfLogicalID": "grudgesCRUDgrudgespermissionmobilehub1439586377",
+				"cfPhysicalID": "MOBILEHUB-1439586377-Development-CloudLogic-grudgesCRUDgrudgespermissionmobilehub14395-1ATVZ2UX7460O",
+				"lastUpdateTimestamp": "1538831554451",
+				"reason": "none",
+				"region": "us-east-1",
+				"status": "CREATE_COMPLETE"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "grudges-deployments-mobilehub-1439586377",
+			"arn": null,
+			"feature": "common",
+			"attributes": {
+				"region": "us-east-1",
+				"s3-bucket-console-url": "https://s3.console.aws.amazon.com/s3/buckets/grudges-deployments-mobilehub-1439586377"
+			}
+		},
+		{
+			"type": "AWS::CloudFormation::Stack",
+			"name": "Development",
+			"arn": "arn:aws:cloudformation:us-east-1:048683963026:stack/MOBILEHUB-1439586377-Development/46578510-c969-11e8-8745-503aca261629",
+			"feature": "cloud-api",
+			"attributes": {
+				"cfHash": "-1503965204",
+				"primary": "true",
+				"region": "us-east-1",
+				"stack-arn": "arn:aws:cloudformation:us-east-1:048683963026:stack/MOBILEHUB-1439586377-Development/46578510-c969-11e8-8745-503aca261629",
+				"stateDetails": "none",
+				"stateSummary": "CREATE_COMPLETE"
+			}
+		}
+	]
+}

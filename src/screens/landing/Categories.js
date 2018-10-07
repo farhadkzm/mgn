@@ -13,7 +13,7 @@ const CategoryItem = props => {
       marginRight: 20,
       backgroundColor: "#fff",
       shadowColor: props.shadowColor,
-      shadowOffset: { width: 0, height: 3 },
+      shadowOffset: { width: 1, height: 3 },
       shadowOpacity: 1,
       shadowRadius: 5,
       marginBottom: 10,
@@ -95,7 +95,7 @@ class Categories extends Component {
             justifyContent: "space-between",
             alignItems: "center",
             width: "100%",
-            marginBottom: 39
+            marginBottom: 20
           }}
         >
           <Text
